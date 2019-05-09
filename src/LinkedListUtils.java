@@ -29,9 +29,17 @@ public class LinkedListUtils {
     }
 
     public static boolean containsSubsequence(LinkedList<Integer> one, LinkedList<Integer> two) {
-
-        /* IMPLEMENT THIS METHOD! */
-
-        return true; // this line is here only so this code will compile if you don't modify it
+        if (one == null || two == null || one.size() == 0 || two.size() == 0 || !one.contains(two.getFirst())) {
+            return false;
+        }
+        int initialPosition = one.indexOf(two.getFirst());
+        for (int valuesFromListTwo : two)
+        {
+            if (initialPosition == one.size() || valuesFromListTwo != one.get(initialPosition)) {
+                return false;
+            }
+            initialPosition++;
+        }
+        return true;
     }
 }
