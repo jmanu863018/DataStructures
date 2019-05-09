@@ -23,13 +23,24 @@ public class LinkedListUtils {
 
 
     public static void removeMaximumValues(LinkedList<String> list, int N) {
-
-        /* IMPLEMENT THIS METHOD! */
-
+        if (list != null && list.size() != 0 && N > 0) {
+            if (N >= list.size()) {
+                list.clear();
+            } else {
+                LinkedList<String> auxList = (LinkedList) list.clone();
+                auxList.sort(String::compareToIgnoreCase);
+                int position = 0;
+                while (position < list.size() - N) {
+                    auxList.removeFirst();
+                    position++;
+                }
+                list.removeAll(auxList);
+            }
+        }
     }
 
     public static boolean containsSubsequence(LinkedList<Integer> one, LinkedList<Integer> two) {
-        if (one == null || two == null || one.size() == 0 || two.size() == 0 || !one.contains(two.getFirst())) {
+        if (one == null && two == null || one.size() == 0 && two.size() == 0 || !one.contains(two.getFirst())) {
             return false;
         }
         int initialPosition = one.indexOf(two.getFirst());
