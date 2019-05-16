@@ -17,5 +17,23 @@ public class Main {
         System.out.println("Remove from position:");
         newList.removeFromPosition(3);
         newList.printList();
+
+        CustomList newListGeneric = new CustomList();
+        newListGeneric.add('X');
+        newListGeneric.add(2);
+        newListGeneric.add(3.5);
+        newListGeneric.add(4);
+        newListGeneric.addToTheBeginning("a");
+        newListGeneric.addToPosition("5",1);
+        newListGeneric.printList();
+        System.out.println("Remove first:");
+        newListGeneric.removeFirst();
+        newListGeneric.printList();
+        System.out.println("Remove last:");
+        newListGeneric.removeLast();
+        newListGeneric.printList();
+        System.out.println("Remove from position:");
+        newListGeneric.removeFromPosition(0);
+        newListGeneric.printList();
     }
 }

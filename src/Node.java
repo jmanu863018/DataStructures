@@ -1,8 +1,8 @@
-public class Node {
-    protected int value;
+public class Node<T> {
+    protected T value;
     protected Node next;
 
-    public Node(int value) {
+    public Node(T value) {
         this.value = value;
         next = null;
     }

@@ -1,9 +1,9 @@
-public interface IList {
-    void add(int value);
+public interface IList<T> {
+    void add(T value);
     void removeFirst();
     void printList();
-    void addToTheBeginning(int value);
-    void addToPosition(int value, int position);
+    void addToTheBeginning(T value);
+    void addToPosition(T value, int position);
     void removeLast();
     void removeFromPosition(int position);
 }
