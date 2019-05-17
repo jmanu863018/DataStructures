@@ -1,3 +1,6 @@
+/**
+ * Interface for single linked list.
+ */
 public interface IList {
     void add(int value);
     void removeFirst();

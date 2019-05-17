@@ -1,7 +1,14 @@
+/**
+ * Class to handle custom list.
+ */
 public class CustomList implements IList {
     private Node head;
     private Node tail;
 
+    /**
+     * Adds a value into custom list.
+     * @param value
+     */
     @Override
     public void add(int value) {
         Node newNode = new Node(value);
@@ -14,6 +21,10 @@ public class CustomList implements IList {
         }
     }
 
+    /**
+     * Add a value to the beginning of list.
+     * @param value
+     */
     @Override
     public void addToTheBeginning(int value) {
         if (head != null) {
@@ -25,6 +36,11 @@ public class CustomList implements IList {
         }
     }
 
+    /**
+     * Adds a value to specific position.
+     * @param value
+     * @param position
+     */
     @Override
     public void addToPosition(int value, int position) {
         if (head != null) {
@@ -40,6 +56,9 @@ public class CustomList implements IList {
         }
     }
 
+    /**
+     * Removes a value from first position.
+     */
     @Override
     public void removeFirst() {
         if (head.next == null) {
@@ -48,6 +67,9 @@ public class CustomList implements IList {
         head = head.next;
     }
 
+    /**
+     * Removes a value from last position.
+     */
     @Override
     public void removeLast() {
         Node current = head;
@@ -57,6 +79,10 @@ public class CustomList implements IList {
         current.next = null;
     }
 
+    /**
+     * Removes a value from an specific position.
+     * @param position
+     */
     @Override
     public void removeFromPosition(int position) {
         Node current = head;
@@ -66,6 +92,9 @@ public class CustomList implements IList {
         current.next = current.next.next;
     }
 
+    /**
+     * Prints list.
+     */
     @Override
     public void printList() {
         Node current = head;
