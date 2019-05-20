@@ -1,5 +1,9 @@
+/**
+ * Interface for single linked list.
+ */
 public interface IList<T> {
-    void add(T value);
+
+    void add(int value);
     void removeFirst();
     void printList();
     void addToTheBeginning(T value);
