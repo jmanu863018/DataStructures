@@ -1,6 +1,10 @@
+import customStructures.CustomList;
+import genericInterfaces.IList;
+import genericInterfaces.IQueue;
+
 public class Main {
     public static void main (String [] args) {
-        CustomList newList = new CustomList();
+        IList<Integer> newList = new CustomList<Integer>();
         newList.add(1);
         newList.add(2);
         newList.add(3);
@@ -18,7 +22,7 @@ public class Main {
         newList.removeFromPosition(3);
         newList.printList();
 
-        CustomList newListGeneric = new CustomList();
+        IList<Object> newListGeneric = new CustomList<Object>();
         newListGeneric.add('X');
         newListGeneric.add(2);
         newListGeneric.add(3.5);
@@ -35,5 +39,7 @@ public class Main {
         System.out.println("Remove from position:");
         newListGeneric.removeFromPosition(0);
         newListGeneric.printList();
+
+
     }
 }

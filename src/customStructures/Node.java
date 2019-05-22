@@ -1,8 +1,10 @@
+package customStructures;
+
 /**
  * Class for nodes.
  */
-public class Node {
-    protected int value;
+public class Node<T> {
+    protected T value;
     protected Node next;
 
     /**

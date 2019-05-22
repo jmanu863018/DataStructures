@@ -1,3 +1,7 @@
+package customStructures;
+
+import genericInterfaces.IList;
+
 /**
  * Class to handle custom list.
  */
@@ -105,5 +109,9 @@ public class CustomList<T> implements IList<T> {
                 current = current.next;
             }
         }
+    }
+
+    public Node getHead() {
+        return head;
     }
 }
