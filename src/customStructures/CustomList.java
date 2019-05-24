@@ -1,7 +1,12 @@
+package customStructures;
+
+import genericInterfaces.IList;
+
 /**
  * Class to handle custom list.
  */
-public class CustomList implements IList {
+public class CustomList<T> implements IList<T> {
+
     private Node head;
     private Node tail;
 
@@ -10,7 +15,7 @@ public class CustomList implements IList {
      * @param value
      */
     @Override
-    public void add(int value) {
+    public void add(T value) {
         Node newNode = new Node(value);
         if (head == null) {
             head = newNode;
@@ -26,7 +31,7 @@ public class CustomList implements IList {
      * @param value
      */
     @Override
-    public void addToTheBeginning(int value) {
+    public void addToTheBeginning(T value) {
         if (head != null) {
             Node newNode = new Node(value);
             newNode.next = head;
@@ -42,7 +47,7 @@ public class CustomList implements IList {
      * @param position
      */
     @Override
-    public void addToPosition(int value, int position) {
+    public void addToPosition(T value, int position) {
         if (head != null) {
             Node current = head;
             for (int initialPosition = 1; initialPosition < position - 1 ; initialPosition++) {
@@ -104,5 +109,9 @@ public class CustomList implements IList {
                 current = current.next;
             }
         }
+    }
+
+    public Node getHead() {
+        return head;
     }
 }
