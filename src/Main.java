@@ -1,3 +1,4 @@
+import binaryTree.CustomTree;
 import customStructures.CustomList;
 import genericInterfaces.IList;
 import genericInterfaces.IQueue;
@@ -40,6 +41,10 @@ public class Main {
         newListGeneric.removeFromPosition(0);
         newListGeneric.printList();
 
-
+        CustomTree customTree = new CustomTree();
+        customTree.add(1);
+        customTree.add(2);
+        customTree.add(3);
+        customTree.add(4);
     }
 }
