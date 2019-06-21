@@ -1,7 +1,7 @@
 package binaryTree;
 
 public class CustomTree {
-    private Node root;
+    protected Node root;
 
     public void add(int value) {
         Node newNode = new Node(value);
@@ -23,6 +23,14 @@ public class CustomTree {
             } else {
                 addNode(newNode, customRoot.right);
             }
+        }
+    }
+
+    public void printTree(Node customRoot) {
+        if (customRoot != null) {
+            System.out.print(" " + customRoot.value);
+            printTree(customRoot.left);
+            printTree(customRoot.right);
         }
     }
 }

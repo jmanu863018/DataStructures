@@ -40,11 +40,5 @@ public class Main {
         System.out.println("Remove from position:");
         newListGeneric.removeFromPosition(0);
         newListGeneric.printList();
-
-        CustomTree customTree = new CustomTree();
-        customTree.add(1);
-        customTree.add(2);
-        customTree.add(3);
-        customTree.add(4);
     }
 }
