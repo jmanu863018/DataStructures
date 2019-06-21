@@ -10,5 +10,8 @@ public class MainTree {
         customTree.add(8);
         customTree.add(0);
         customTree.printTree(customTree.root);
+        customTree.balanceTree(customTree.root);
+        System.out.println("\nBalanced tree");
+        customTree.printTree(customTree.root);
     }
 }
