@@ -28,7 +28,7 @@ public class CustomTree {
 
     public void printTree(Node customRoot) {
         if (customRoot != null) {
-            System.out.print(" " + customRoot.value);
+            System.out.print("Node: " + customRoot.value);
             printTree(customRoot.left);
             printTree(customRoot.right);
         }
