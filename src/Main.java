@@ -1,3 +1,4 @@
+import binaryTree.CustomTree;
 import customStructures.CustomList;
 import genericInterfaces.IList;
 import genericInterfaces.IQueue;
@@ -39,7 +40,5 @@ public class Main {
         System.out.println("Remove from position:");
         newListGeneric.removeFromPosition(0);
         newListGeneric.printList();
-
-
     }
 }
